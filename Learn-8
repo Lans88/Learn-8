@@ -1,0 +1,121 @@
+//Утверждение(assert)
+//Проверка возраста дракона
+let strName = "Dragon"
+let strYoung = "Junior"
+let strOld = "Old man"
+let strEmpty = " "
+var dragonAge = 230
+    //Сравнение возраста дракона указанного в переменной
+assert( dragonAge <= 235, strName+strEmpty+strOld )
+assert( dragonAge >= 225, strName+strEmpty+strYoung)
+    //вывод на экран соответствующего сообщения
+print ("Program is end worked")
+    //проверка возраста дракона через условие
+if dragonAge >= 225 || dragonAge <= 235 {
+    print ("Программа успешно завершила свое выполнение")
+} else if dragonAge < 225 {
+    print("Дракон молод")
+} else if dragonAge > 235 {
+    print ("Дракон стар")
+}
+// проверка значения переменной
+//переменная типа bool
+var logicVar = true
+//проверка значения переменной
+if logicVar {
+    print ("Переменная logicVar истинна")
+} 
+//проверка значения на ложность
+//полная форма записи
+var logikVar = false
+if logikVar == false {
+    print ("Переменная logikVar ложна")
+}
+//сокращенная форма записи
+if !logikVar {
+    print ("Переменная logikVar вновь ложна")
+}
+//стандартный синтаксис условного оператора
+var logicVar2 = true
+if logicVar2 {
+    print ("Переменная истинна")
+} else {
+    print ("Переменная ложна")
+}
+//Проверка в какой диапазон попадает сумма чисел
+let a = 1000
+let b = 952
+if a + b > 1000 {
+    print ("Сумма числел больше 1000")
+} else {
+    print ("Сумма чисел меньше или равна 1000")
+}
+//усложнение проверки условий операторами и/или
+var firstLogicVar = true
+var secondLogicVar = false
+//проверка значения переменных
+if firstLogicVar || secondLogicVar {
+    //print ("Одна или две переменные истинны")
+} else {
+    //print ("Обе переменные ложны")
+}
+//доработка кода оператором И, вкладывание одного условия в другое
+if firstLogicVar || secondLogicVar {
+    if firstLogicVar && secondLogicVar {
+        print("Обе переменные истинны")
+    } else {
+        print ("Только одна из переменных истинна")
+    }
+} else {
+    print ("Обе переменные ложны")
+}
+
+//модификация и более правильный вариант предыдущего кода
+if firstLogicVar && secondLogicVar {
+    print ("Обе переменные истинны")
+} else {
+    if firstLogicVar || secondLogicVar {
+        print ("Только одна из переменных истинна")
+    } else {
+        print ("Обе переменные ложны")
+    }
+}
+//проверка значения переменных исп. расширенный синтаксис
+if firstLogicVar && secondLogicVar {
+    print ("Обе перменные  истинны")
+} else if firstLogicVar || secondLogicVar {
+    print ("Только одна из переменных истинна")
+} else {
+    print ("Обе переменные ложны")
+}
+//Решение задачи из примера, рассчет дневного дохода от сдачи кв в аренду. Стоимость зависит от количества жильцов
+var tenant = 10
+var rentRoom = 0
+if tenant < 5 {
+    rentRoom = 1000
+} else if tenant >= 5 && tenant <= 7 {
+    rentRoom = 800
+} else {
+    rentRoom = 500
+}
+var allPrice = tenant * rentRoom
+print (allPrice)
+    //Другой вариант решения задачи
+if (..<5).contains(tenant) {
+    rentRoom = 1000
+} else if (5...7).contains(tenant) {
+    rentRoom = 800
+} else {
+    rentRoom = 500
+}
+var allPriceRent = tenant * rentRoom
+print (allPriceRent)
+    //тенарный оператор сравнения
+    //переменная типа Int
+var height = 180
+// переменная типа bool
+var isHeader = true
+//вычисление значения константы
+let rowHeight = height + (isHeader ? 20 : 10)
+//вывод значения переменной
+rowHeight // 200
